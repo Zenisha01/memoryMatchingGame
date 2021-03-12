@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MEMORY MATCHING GAME</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- <h3>
+        Seconds left:
+        <span id="time-left">10</span>
+    </h3>
+    <button id="start-button">Start</button> -->
+    <div id="game-over">
+        <h1 id="game-over-message"></h1>
+        <h1 id="game-over-time"></h1>
+
+        <button class="reset-button" onclick="resetButton() ">
+        <b>Reset</b>
+      </button>
+    </div>
+    <div class="timer">
+        <h2>Timer</h2>
+        <h3 id="timer-countdown">00:00</h3>
+        <h4 id="message"></h4>
+    </div>
+    <section id="number" class="memory-game">
+        <div class="memory-card" data-framework="Thinking ">
+            <img class="front-face" src="images/img1.jpg " alt="Thinking " />
+            <img class="back-face" src="images/coverimage.jpg " alt="coverimage " />
+        </div>
+        <div class="memory-card" data-framework="Thinking ">
+            <img class="front-face" src="images/img1.jpg " alt="Thinking" />
+            <img class="back-face" src="images/coverimage.jpg " alt="coverimage " />
+        </div>
+
+        <div class="memory-card" data-framework="Flying ">
+            <img class="front-face" src="images/img2.jpg " alt="Flying " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+        <div class="memory-card" data-framework="Flying ">
+            <img class="front-face" src="images/img2.jpg " alt="Flying " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+
+        <div class="memory-card" data-framework="Reading ">
+            <img class="front-face" src="images/img3.jpg " alt="Reading " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+        <div class="memory-card" data-framework="Reading ">
+            <img class="front-face" src="images/img3.jpg " alt="Reading " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+
+        <div class="memory-card" data-framework="Sipping ">
+            <img class="front-face" src="images/img4.jpg " alt="Sipping " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+        <div class="memory-card" data-framework="Sipping ">
+            <img class="front-face" src="images/img4.jpg " alt="Sipping " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+
+        <div class="memory-card" data-framework="Coffee ">
+            <img class="front-face" src="images/img5.jpg " alt="Coffee " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+        <div class="memory-card" data-framework="Coffee ">
+            <img class="front-face" src="images/img5.jpg " alt="Coffee " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+
+        <div class="memory-card" data-framework="Eating ">
+            <img class="front-face" src="images/img6.jpg " alt="Eating " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+        <div class="memory-card" data-framework="Eating ">
+            <img class="front-face" src="images/img6.jpg " alt="Eating " />
+            <img class="back-face" src="images/coverimage.jpg " alt="Cover Image " />
+        </div>
+    </section>
+
+    <div class="clickCounter">
+        <h2>Click Count</h2>
+        <h3 id="click-count-value">0</h3>
+
+        <button class="reset-button" onclick="resetButton() ">
+        <b>Reset</b>
+      </button>
+        <script src="scripts.js "></script>
+    </div>
+</body>
+
+</html>

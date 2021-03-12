@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-image: url(images/space.jpg);
+}
+
+.click-count {
+    position: absolute;
+    top: 150px;
+    left: 775px;
+}
+
+.time-taken {
+    position: absolute;
+    top: 100px;
+    left: 900px;
+}
+
+.time-count {
+    position: absolute;
+    top: 150px;
+    left: 905px;
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1c7ccc;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.back-face:hover {
+    background-color: #043c69;
+}
+
+
+/* .container {
+    width: 400px;
+    background: rgb(28, 197, 209);
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-widgetinput:not(:checked)~label:hover {
+    color: #fd4;
+} */
+
+.reset-button {
+    margin-right: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 45%;
+    bottom: 20px;
+    border: none;
+    cursor: pointer;
+    background: #1c7ccc;
+    color: floralwhite;
+    width: 100px;
+    height: 50px;
+    font-size: large;
+}
+
+.reset-button:hover {
+    background-color: #043c69;
+}
+
+#message {
+    z-index: 10;
+    font-size: 50px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    border: 1px solid blue;
+    background: rgb(102, 221, 211);
+    left: 45%;
+}
+
+#game-over {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    z-index: 11;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#game-over-message {
+    text-align: center;
+}
+
+.timer {
+    color: white;
+}
+
+.clickCounter {
+    color: white;
+}
