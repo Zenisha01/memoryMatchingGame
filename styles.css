@@ -30,7 +30,7 @@ body {
 
 .memory-game {
     width: 640px;
-    height: 640px;
+    height: 75%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -128,11 +128,16 @@ body {
     z-index: 10;
     font-size: 50px;
     position: absolute;
-    top: 45%;
-    left: 45%;
-    border: 1px solid blue;
-    background: rgb(102, 221, 211);
-    left: 45%;
+    /* transition: 2s all; */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: cornsilk;
+    padding: 29px;
+    border-radius: 28px;
+    border: 1px solid white;
+    text-align: center;
+    color: black;
 }
 
 #game-over {
@@ -151,8 +156,13 @@ body {
 
 .timer {
     color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 .clickCounter {
     color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 10px;
 }

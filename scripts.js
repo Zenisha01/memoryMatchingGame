@@ -25,6 +25,7 @@ let isGameOver = false;
 let starObtained = 0;
 
 function gameInit() {
+    document.getElementById("message").style.display = "none";
     document.getElementById("timer-countdown").innerHTML = "10" + " : " + "00";
     document.getElementById("game-over").style.display = "none";
 }
@@ -77,13 +78,13 @@ function disableCardAndShowMatchedMessage() {
         const timeTaken = formatSeconds(totalSecToCompleteGame);
         document.getElementById(
             "game-over-message"
-        ).innerHTML = `Congratulations ! you won. You have obtained ${starObtained} star(s)`;
+        ).innerHTML = `Congratulations! You win. You have obtained ${starObtained} star(s)`;
         document.getElementById(
             "game-over-time"
         ).innerHTML = `Time Taken: ${timeTaken}`;
         return;
     }
-    showMessage("HURRAY! Card Matched");
+    showMessage("Card Matched");
     resetBoard();
 }
 
@@ -118,9 +119,11 @@ function resetButton() {
 
 function showMessage(message) {
     document.getElementById("message").innerHTML = message;
+    document.getElementById("message").style.display = "block";
     setTimeout(() => {
         document.getElementById("message").innerHTML = "";
-    }, 3000);
+        document.getElementById("message").style.display = "none";
+    }, 800);
 }
 
 function startTimer() {
